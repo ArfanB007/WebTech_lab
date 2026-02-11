@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registration Form</title>
+
+    <script>
+        function toggleOtherGender() {
+            const otherRadio = document.getElementById("Other");
+            const otherGenderBox = document.getElementById("otherGenderBox");
+
+            if (otherRadio.checked) {
+                otherGenderBox.style.display = "block";
+            } else {
+                otherGenderBox.style.display = "none";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Student Registration</h2>
+    <hr>
+
+    <form>
+        <label for="name">Full Name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter Full Name Here" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter Email Address Here" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" placeholder="Enter Password Here" required><br><br>
+
+        <label for="gender">Gender:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required onclick="toggleOtherGender()">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female" required onclick="toggleOtherGender()">
+        <label for="female">Female</label><br><br>
+
+        <input type="radio" id="Other" name="gender" value="Other" required onclick="toggleOtherGender()">
+        <label for="Other">Other</label><br><br>
+
+        <!-- Hidden dropdown for Other gender -->
+        <div id="otherGenderBox" style="display:none;">
+            <label for="otherGender">Select Gender:</label><br>
+            <select id="otherGender" name="otherGender">
+                <option value="">-- Select --</option>
+                <option value="non-binary">Non-binary</option>
+                <option value="transgender">Transgender</option>
+                <option value="genderqueer">Genderqueer</option>
+                <option value="genderfluid">Genderfluid</option>
+                <option value="agender">Agender</option>
+                <option value="bigender">Bigender</option>
+                <option value="two-spirit">Two-Spirit</option>
+                <option value="demiboy">Demiboy</option>
+                <option value="demigirl">Demigirl</option>
+                <option value="interender">interender</option>
+            </select><br><br>
+        </div>
+
+        <label for="skills">Skills:</label><br>
+        <input type="checkbox" id="c++" name="skills" value="c++" required>
+        <label for="c++">C++</label><br>
+
+        <input type="checkbox" id="java" name="skills" value="java" required>
+        <label for="java">Java</label><br>
+
+        <input type="checkbox" id="sql" name="skills" value="sql" required>
+        <label for="sql">SQL</label><br>
+
+        <input type="checkbox" id="c#" name="skills" value="c#" required>
+        <label for="c#">C#</label><br>
+
+        <input type="checkbox" id="python" name="skills" value="python" required>
+        <label for="python">Python</label><br>
+
+        <input type="checkbox" id="html" name="skills" value="html" required>
+        <label for="html">HTML</label><br><br>
+
+        <label for="department">Department:</label><br>
+        <select id="department" name="department" required>
+            <option value="">-- Select --</option>
+            <option value="cse">Computer Science & Engineering</option>
+            <option value="eee">Electrical & Electronics Engineering</option>
+            <option value="ba">Business Administration</option>
+        </select><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="10" cols="100"
+            placeholder="Write Your Message Here" required></textarea><br><br>
+
+        <button type="submit">Submit</button>
+
+        <hr>
+        <footer>
+            <small>
+                2026 Student Registration System. All rights reserved.<br>
+                Developed by Arfan Nihal [23-54270-3]
+            </small>
+        </footer>
+    </form>
+</body>
+</html>
