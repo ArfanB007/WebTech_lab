@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="description" content="Academic profile page demonstrating semantic HTML5, forms, and tables">
+    <meta name="keywords" content="AIUB, Web Technologies, HTML5, Semantic, Form, Table">
+    <meta name="author" content="Student Name">
+    <title>Academic Profile — Lab Task 05</title>
+</head>
+<body>
+   
+    <header>
+        <h1>Arfan Nehal</h1>
+        <nav>
+            <a href="#bio">Biography</a> |
+            <a href="#education">Education</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        <section id="bio">
+            <h2>Biography</h2>
+            <p>Computer science student with a passion for web development and Game design.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <fieldset>
+            <table>
+                <caption>Academic Qualifications</caption>
+                
+                <thead>
+                    <tr>
+                        <th scope="col">Degree</th>
+                        <th scope="col">Institution</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Result (CGPA)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>BSc in Computer Science</td>
+                        <td>American International University-Bangladesh</td>
+                        <td>2026</td>
+                        <td>3.80</td>
+                    </tr>
+                    <tr>
+                        <td>Higher Secondary Certificate</td>
+                        <td>Dhaka College</td>
+                        <td>2022</td>
+                        <td>5.00</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary School Certificate</td>
+                        <td>Ideal School & College</td>
+                        <td>2020</td>
+                        <td>5.00</td>
+                    </tr>
+            
+                </tbody>
+                
+            </table>
+        </fieldset>
+        </section>
+
+        
+        <section id="contact">
+            
+            <h2>Contact Me</h2>
+            <fieldset>
+            <form action="#" method="post">
+                <label for="contact-name">Full Name (required):</label>
+                <input type="text" id="contact-name" name="fullname" required><br><br>
+
+                <label for="contact-email">Email Address (required):</label>
+                <input type="email" id="contact-email" name="email" required><br><br>
+
+                <label for="phone">Phone Number:</label>
+                
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" placeholder="01712345678"><br><br>
+
+                <label for="message">Message (required, max 500 chars):</label><br>
+                <textarea id="message" name="message" rows="4" cols="50" maxlength="500" required></textarea><br><br>
+
+                <input type="submit" value="Send Message">
+            </form>
+            </fieldset>
+        </section>
+    </main>
+    <hr>
+
+    
+    <footer>
+        <p>Contact: Arfan123@gmail.com | © 2026 Arfan Nehal </p>
+    </footer>
+</body>
+</html>
