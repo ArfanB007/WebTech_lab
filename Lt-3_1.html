@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Academic profile page demonstrating semantic HTML5, forms, and tables">
+    <meta name="keywords" content="AIUB, Web Technologies, HTML5, Semantic, Form, Table">
+    <meta name="author" content="Student Name">
+    <title>Academic Profile — Lab Task 05</title>
+
+    
+    <link rel="stylesheet" href="lt5_style.css">
+</head>
+<body>
+
+    <header class="box-model box1">
+        <h1>Arfan Nehal</h1>
+        <nav>
+            <a href="#bio">Biography</a> |
+            <a href="#education">Education</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="bio" class="box-model box2">
+            <h2>Biography</h2>
+            <p class="inline-demo">Computer science student with a passion for web development and Game design.</p>
+        </section>
+
+        <section id="education" class="box-model box3">
+            <h2>Education</h2>
+            <fieldset>
+                <table class="default-box">
+                    <caption>Academic Qualifications</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Year</th>
+                            <th>Result (CGPA)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>BSc in Computer Science</td>
+                            <td>American International University-Bangladesh</td>
+                            <td>2026</td>
+                            <td>3.80</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </section>
+
+        <section id="contact" class="border-box">
+            <h2>Contact Me</h2>
+
+            <fieldset>
+                <form>
+                    <label>Full Name:</label>
+                    <input type="text"><br><br>
+
+                    <label>Email:</label>
+                    <input type="email"><br><br>
+
+                    <label>Message:</label><br>
+                    <textarea rows="4" cols="40"></textarea><br><br>
+
+                    <input type="submit" value="Send Message">
+                </form>
+            </fieldset>
+        </section>
+
+        
+        <div class="block-demo">Block Element (div)</div>
+
+        <span class="inline-demo">Inline Element</span>
+        <span class="inline-demo">Another Inline</span>
+
+        <p class="inline-block-demo">Inline-Block Paragraph</p>
+
+        <div class="display-none">This uses display none</div>
+
+        <div class="visibility-hidden">This uses visibility hidden</div>
+
+        <div class="normal-box">Normal Box for Comparison</div>
+
+    </main>
+
+    <footer class="box-model box1">
+        <p>Contact: Arfan123@gmail.com | © 2026 Arfan Nehal</p>
+    </footer>
+
+</body>
+</html>
