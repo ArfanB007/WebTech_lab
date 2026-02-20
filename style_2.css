@@ -138,7 +138,7 @@ select:focus {
     box-shadow: 0 0 5px rgba(52,152,219,0.5);
 }
 
-
+/*  */
 input[type="submit"]:active,
 input[type="reset"]:active {
     transform: scale(0.98);

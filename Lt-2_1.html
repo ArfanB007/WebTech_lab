@@ -3,72 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Lab Task 04: HTML Form with CSS</title>
-    
-    <link rel="stylesheet" href="Style_1.css">
-  
-    <style>
-       
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box; 
-        }
-
-        h1 {
-            color: darkblue;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: lightgray;
-            padding: 10px;
-        }
-
-        p {
-            font-size: 16px;
-            font-family: Verdana, sans-serif;
-            text-align: center;
-        }
-
-        .highlight {
-            background-color: yellow;
-            color: black;
-            font-weight: bold;
-        }
-
-        #mainTitle {
-            text-decoration: underline;
-            text-transform: uppercase;
-        }
-
-        fieldset {
-            border: 2px solid #ccc;
-            margin: 10px 0;
-            padding: 15px;
-        }
-
-        legend {
-            font-weight: bold;
-            color: darkgreen;
-        }
-
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style_2.css">
 </head>
 <body>
-   
-    <h1 id="mainTitle">Student Registration Form</h1>
-    
-    <p class="highlight">Please fill in the details carefully.</p>
+    <h1>Lab Task</h1>
+    <h2>User Information Form</h2>
 
     <form action="#" method="post">
         <fieldset>
             <legend>Personal Information</legend>
-            
+
             <label for="fullname">Full Name:</label>
             <input type="text" id="fullname" name="fullname"><br><br>
 
@@ -90,7 +34,7 @@
 
         <fieldset>
             <legend>Academic Information</legend>
-            
+
             <label for="department">Department:</label>
             <select id="department" name="department">
                 <option value="cse">Computer Science</option>
@@ -106,13 +50,17 @@
             <input type="checkbox" id="js" name="skills" value="js">
             <label for="js">JavaScript</label><br><br>
         </fieldset>
+        <!-- -->
 
-        
-        <input type="submit" value="Submit" style="background-color: orange; color: black; font-weight: bold; border-radius: 5px;">
+        <input type="submit" value="Submit">
         <input type="reset" value="Reset">
+        <a href="#" class="help-link">Need help?</a>
     </form>
+
     <hr>
-    <p>&copy; All Rights Reserved |AIUB|</p>
-    <p>Developed by Arfan Nehal</p>
+    <div class="footer">
+        <p>&copy; All Rights Reserved |AIUB|</p>
+        <p>Developed by Arfan Nehal</p>
+    </div>
 </body>
 </html>
