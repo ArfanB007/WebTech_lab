@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Lab Task 01</title>
+</head>
+<body>
+ 
+<h1>JavaScript Lab Task 01</h1>
+
+<button onclick="showAlert()">Student Details</button>
+<button onclick="performCalculations()">Perform Calculations</button>
+<button onclick="checkEvenOdd()">Check Even or Odd</button>
+ 
+<script>
+    alert('Welcome to JavaScript');
+    console.log('Welcome to JavaScript');
+    document.write('<h3>Welcome to JavaScript</h3>');
+    
+    document.write('<hr>');
+
+
+    var stFirstName = 'Arfan';
+    var stLastName = 'Nehal';
+    var stAge = 22;
+    
+    function showAlert() {
+        alert('Do you want to View Student Details?');
+        
+        console.log(stFirstName + " " + stLastName);
+        console.log(stAge + 1);
+        document.write('<h3>Student Name: ' + stFirstName + " " + stLastName + '</h3>');
+        document.write('<h3>Student Age: ' + (stAge + 1) + '</h3>');
+    }
+    
+    document.write('<p>Student Name: ' + stFirstName + ' ' + stLastName + '</p>');
+    document.write('<p>Student Age: ' + stAge + '</p>');
+    document.write('<p>Age + 1: ' + (stAge + 1) + '</p>');
+    
+    
+
+    
+    function performCalculations() {
+        var input1 = prompt('Enter first number:');
+        var input2 = prompt('Enter second number:');
+        
+        var num1 = Number(input1);
+        var num2 = parseInt(input2);
+        
+        var sum = num1 + num2;
+        var difference = num1 - num2;
+        var product = num1 * num2;
+        
+     
+        document.write('<h4>Calculation Results:</h4>');
+        document.write('<p>First Number: ' + num1 + '</p>');
+        document.write('<p>Second Number: ' + num2 + '</p>');
+        document.write('<p>Sum: ' + sum + '</p>');
+        document.write('<p>Difference: ' + difference + '</p>');
+        document.write('<p>Product: ' + product + '</p>');
+        document.write('</div>');
+    }
+    
+    
+    function checkEvenOdd() {
+        var input = prompt('Enter a number to check even or odd:');
+        var number = parseInt(input);
+        
+        var result;
+        
+        if (number % 2 === 0) {
+            result =  'EVEN number.';
+        } else {
+            result = 'ODD number.';
+        }
+        
+ 
+        document.write('<h4>Even/Odd Check Result:</h4>');
+        document.write('<p>Number: ' + number + '</p>');
+        document.write('<p>Result: ' + result + '</p>');
+        document.write('</div>');
+        alert(result);
+    }
+</script>
+</body>
+</html>

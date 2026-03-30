@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Lab Task 02 - Functions and Loops</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Lab Task 02</h1>
+
+
+    <div id="output"></div>
+
+    <button onclick="checkStrLength()">Enter String: Check String Length</button>
+
+    <script>
+        function calculateSum(num1, num2) {
+            return num1 + num2;
+        }
+
+        var sum = calculateSum(15, 25);
+        document.write("<p>Sum of 15 and 25 = " + sum + "</p>");
+
+        document.write("<h4>Numbers from 1 to 10 (for loop):</h4>");
+        for (var i = 1; i <= 10; i++) {
+            document.write(i + " ");
+        }
+
+
+        document.write("<h4>Even numbers from 1 to 20 (while loop):</h4>");
+        var num = 1;
+        while (num <= 20) {
+            if (num % 2 === 0) {
+                document.write(num + " ");
+            }
+            num++;
+        }
+        var fullName = "Arfan Nehal";
+
+        var upperCase = fullName.toUpperCase();
+        document.write("<p><strOriginal Name: " + fullName + "</p>");
+        document.write("<p>Uppercase: " + upperCase + "</p>");
+
+        var nameLength = fullName.length;
+        document.write("<p>String Length:" + nameLength + "</p>");
+
+        var firstName = fullName.split(" ")[0];
+        document.write("<p>First Name:" + firstName + "</p>");
+
+
+        function checkStrLength() {
+            var userInput = prompt("Enter any string:");
+
+            if (userInput !== null) {
+                if (userInput.length > 5) {
+                    alert("The string length is " + userInput.length + ", which is greter than 5!");
+                } else {
+                    alert("The string length is " + userInput.length + ", which is NOT grater than 5.");
+                }
+            }
+        }
+
+
+        
+    </script>
+</body>
+
+</html>
