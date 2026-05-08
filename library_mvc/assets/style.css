@@ -1,0 +1,286 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    background: #0a0f1e;
+    background-image: radial-gradient(circle at 10% 20%, rgba(25, 35, 60, 0.6) 0%, #0a0f1e 90%);
+    min-height: 100vh;
+    padding: 32px 24px;
+}
+
+/* Main card container — dark, elevated, with subtle glow */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    background: #11161f;
+    border-radius: 32px;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(210, 180, 140, 0.15);
+    overflow: hidden;
+    padding: 32px 36px;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(0px);
+}
+
+/* Typography — warm gold & ivory accents */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    background: linear-gradient(135deg, #ecd9b4 0%, #c7a56b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 8px;
+    border-left: 4px solid #c7a56b;
+    padding-left: 24px;
+}
+
+h2, h3 {
+    color: #e9e2c7;
+    font-weight: 500;
+    margin: 28px 0 16px 0;
+    border-bottom: 1px solid rgba(199, 165, 107, 0.4);
+    padding-bottom: 10px;
+    letter-spacing: -0.2px;
+}
+
+h2 {
+    font-size: 1.65rem;
+}
+
+h3 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+}
+
+/* Form section — subtle glassmorphic panel */
+.form-section {
+    background: rgba(18, 24, 34, 0.8);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(199, 165, 107, 0.25);
+    border-radius: 24px;
+    padding: 24px 28px;
+    margin-bottom: 32px;
+    transition: border 0.2s;
+}
+
+.form-section:hover {
+    border-color: rgba(199, 165, 107, 0.6);
+}
+
+/* Inputs and selects — modern dark theme */
+input, select {
+    width: calc(25% - 12px);
+    background: #0e131c;
+    border: 1.5px solid #262e3c;
+    padding: 12px 16px;
+    margin: 6px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 450;
+    color: #f0efed;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #c7a56b;
+    box-shadow: 0 0 0 3px rgba(199, 165, 107, 0.2);
+    background: #0b1018;
+}
+
+input::placeholder {
+    color: #6a6f7c;
+    font-weight: 400;
+}
+
+/* Buttons */
+button {
+    padding: 10px 24px;
+    margin: 6px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s;
+    font-family: inherit;
+    letter-spacing: 0.3px;
+}
+
+button[type="submit"] {
+    background: #c7a56b;
+    color: #0e131c;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+button[type="submit"]:hover {
+    background: #ddbc87;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(199, 165, 107, 0.25);
+}
+
+/* Table — elegant, clean, academic */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 24px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    padding: 14px 16px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #1a212d;
+    color: #e9dbbc;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    border-bottom: 1px solid #2d3645;
+}
+
+td {
+    background-color: #0f141e;
+    color: #dbd6cc;
+    border-bottom: 1px solid #1f2837;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background-color: #161e2b;
+    transition: 0.1s;
+}
+
+/* Action buttons inside table (to be used by JS) */
+td button {
+    background: #2a3446;
+    color: #ecd9b4;
+    margin: 0 5px;
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+}
+
+td button:first-child {
+    background: #2f3b4e;
+}
+
+td button:first-child:hover {
+    background: #3e4d66;
+    color: white;
+}
+
+td button:last-child {
+    background: #2a2a3c;
+}
+
+td button:last-child:hover {
+    background: #562b36;
+    color: #ffc9c9;
+}
+
+/* Update form panel — distinct warm card */
+.update-form {
+    display: none;
+    background: #151e28;
+    border: 1px solid #c7a56b;
+    border-radius: 28px;
+    padding: 28px 30px;
+    margin-top: 32px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.update-form h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #c7a56b;
+    display: inline-block;
+    padding-bottom: 6px;
+    color: #f2e5cf;
+}
+
+.update-form input, .update-form select {
+    background: #0c111a;
+    border-color: #334155;
+}
+
+.cancel-btn {
+    background: #2f3b46;
+    color: #e2dccd;
+    border: 1px solid #4e5b6e;
+}
+
+.cancel-btn:hover {
+    background: #3f4c5c;
+    transform: translateY(-1px);
+    color: white;
+}
+
+/* Responsive refinement */
+@media (max-width: 860px) {
+    .container {
+        padding: 20px;
+    }
+    
+    input, select {
+        width: calc(50% - 12px);
+    }
+}
+
+@media (max-width: 640px) {
+    input, select {
+        width: calc(100% - 12px);
+        display: block;
+        margin: 8px 0;
+    }
+    
+    .form-section {
+        padding: 20px;
+    }
+    
+    th, td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+    
+    td button {
+        padding: 4px 10px;
+        margin: 2px;
+    }
+}
+
+/* Custom scroll for a modern library feel */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #11161f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4a3b28;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c7a56b;
+}
